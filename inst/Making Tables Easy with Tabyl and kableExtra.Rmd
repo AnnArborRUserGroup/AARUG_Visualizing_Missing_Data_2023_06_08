@@ -1,0 +1,224 @@
+---
+title: "Making Tables Easy with Tabyl and kableExtra"
+author: "Barry DeCicco"
+date: "For Ann Arbor R Users' Group, May 14, 2020"
+output: ioslides_presentation
+---
+
+## Load libraries:
+
+```{r setup,  include=FALSE}  
+
+# load libraries as needed:
+
+library(tidyverse)
+library(janitor)
+library(kableExtra)
+
+
+```
+
+## This will use the 'mtcars' data set built into base R, and a subset (first 5 rows / first 4 columns) which will be called 'dt':
+
+
+
+
+```{r cars_print_1, echo = TRUE}
+
+head(mtcars)
+
+```
+
+## dt:
+
+```{r cars_print_2, echo = TRUE}
+dt <- mtcars[1:5, 1:4]
+print(dt)
+
+```
+
+
+## The janitor package
+
+### The janitor does 'clean up' tasks:
+
+ - Perfectly format data frame column names;
+ - Isolate partially-duplicate records; and
+ - Provide quick tabulations (i.e., frequency tables and crosstabs).
+
+### For now, just look at the tabulations, which are done with 'tabyl()'
+
+
+
+## Basic Table:
+
+
+
+```{r tabyl_1, echo =TRUE}
+
+
+
+mtcars %>% 
+  tabyl(gear, cyl, show_NA = TRUE)
+
+
+
+
+```
+
+
+## Adding to the Basic Tables, using 'Adorn':
+
+
+
+```{r tabyl_2, echo =TRUE}
+
+
+
+mtcars %>% 
+  tabyl(gear, cyl, show_NA = TRUE) %>% 
+  adorn_totals(where="row")
+
+
+
+
+```
+
+## Using 'Adorn' with multiple options:
+
+
+
+```{r tabyl_3, echo =TRUE}
+
+
+
+mtcars %>% 
+  tabyl(gear, cyl, show_NA = TRUE) %>% 
+  adorn_totals(where=c("row","col"))
+
+
+
+
+```
+
+
+## The use of Adorn can be extended:
+
+
+
+```{r tabyl_4, echo =TRUE}
+
+
+
+mtcars %>% 
+  tabyl(gear, cyl, show_NA = TRUE)       %>% 
+  adorn_totals(where=c("row","col"))     %>% 
+  adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting(digits = 0) 
+
+
+
+
+```
+
+
+## Mixing in Percentages, and Formatting Them:
+
+
+```{r tabyl_5, echo =TRUE}
+
+
+
+mtcars %>% 
+  tabyl(gear, cyl, show_NA = TRUE)       %>% 
+  adorn_totals(where=c("row","col"))     %>% 
+  adorn_percentages(denominator = "col") %>% 
+  adorn_pct_formatting(digits = 0) %>% 
+  adorn_ns(position = "front")
+
+
+
+
+```
+
+
+
+## The kableExtra package
+
+### This package allows easy html tables - here is the simplest:
+
+
+```{r kableExtra_1, echo =TRUE}
+
+
+
+dt %>% 
+  kable()
+
+
+
+
+```
+
+
+
+## The easiest improvement is to use the styling command: 
+
+
+
+```{r kableExtra_2, echo =TRUE}
+
+
+
+dt                   %>% 
+  kable()            %>%
+  kable_styling()
+
+
+
+
+```
+
+
+
+## Options for the styling() commands: 
+
+- The 'responsive' command will allow horizontal scrolling on small screens.
+- The 'full_width = F' will not take up the whole page width if not neeeded.
+- The position = 'center' command centers it ('left', 'right')
+- (not shown) "float_right" would allow text to be put to the left of the table.
+
+## Code:
+
+
+
+```{r kableExtra_3, echo =TRUE}
+
+dt                     %>% 
+  kable()              %>%
+  kable_styling(bootstrap_options = 
+                  c("striped", "hover", "condensed", "responsive",
+                    full_width = F, position = "center")
+                )
+
+
+```
+
+
+## Other things: 
+
+- Locking the header row.
+- Setting up scrolling.
+- Controlling the cells (e.g., conditional highlighting).
+- Linking to other locations.
+
+### ...many, many other things.
+
+## Questions?
+
+## References:
+
+ - The janitor package vignette:  https://garthtarr.github.io/meatR/janitor.html
+ 
+ - The kableExtra package:  https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#html_only_features
+

@@ -1,0 +1,161 @@
+---
+title: "Tables in R for AARUG Presentation"
+author: "Barry DeCicco"
+date: "5/12/2020"
+output: 
+  html_document:
+    toc:  true
+    toc_float: true
+    code_folding: show
+  
+---
+
+```{r setup,  collapse=TRUE}  
+
+# load libraries as needed:
+# 
+
+library(pastecs)
+# https://stats.idre.ucla.edu/r/faq/how-can-i-get-a-table-of-basic-descriptive-statistics-for-my-variables/
+
+
+library(htmlTable)
+library(psych)
+library(tidyverse)
+library(inspectdf)
+library(janitor)
+
+library(Hmisc)
+library(summarytools)
+library(readr)
+
+# library(devtools)
+# devtools::install_github("alastairrushworth/inspectdf")
+
+library(inspectdf)   
+# https://www.r-bloggers.com/part-2-simple-eda-in-r-with-inspectdf/
+ 
+library(kableExtra)
+```
+
+## Import the Gapminder data set:
+
+
+```{r import data, include=TRUE}
+
+
+gapminder <- read_csv("Data/gapminder_data.csv", 
+                      col_names=TRUE,
+                      cols(
+                        country = col_character(),
+                        year = col_integer(),
+                        continent = col_character(),
+                        pop = col_integer(),
+                        lifeExp = col_double(),
+                        gdpPercap = col_double()
+                      ))
+
+```
+
+## Examine the imported data set:
+
+#### Make sure that it was imported properly.
+
+```{r eda, collapse=TRUE}
+dim(gapminder)
+class(gapminder)
+lapply(gapminder, class)
+sapply(gapminder, function(x) sum(is.na(x)))   
+sapply(gapminder, function(x) sum(is.na(x)/length(x)))  
+# https://sebastiansauer.github.io/sum-isna/
+str(gapminder)
+summary(gapminder)
+
+
+```
+
+## Summary table using pastecs package:
+
+```{r pastecs, collapse=TRUE}
+
+
+
+# Set formatting options: 
+
+options(scipen=100)
+options(digits=2)
+
+gapminder %>% 
+  select_if(is.numeric) %>% 
+  stat.desc()
+
+# Run a more limited set of statistics:
+
+gapminder %>% 
+  select_if(is.numeric) %>% 
+  stat.desc(., basic=F)
+
+
+
+
+```
+
+
+## Tables using the kableExtra package:
+
+#### https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+
+#### The first table is run with base styling.
+
+#### The second table is run with row striping, shorter row heights, and 'responsive' (with horizontal scrolling).
+
+
+```{r describe_functions, collapse=TRUE}
+
+# Set formatting options: 
+
+options(scipen=100)
+options(digits=2)
+
+# Describe function from Hmisc:
+
+Hmisc::describe(gapminder) 
+
+# gapminder %>%
+#   kable() %>%
+#   kable_styling()
+
+
+
+gapminder %>% 
+  select_if(is.numeric) %>% 
+  stat.desc(., basic=F)  %>% 
+  kable() %>%
+  kable_styling()
+
+
+gapminder %>% 
+  select_if(is.numeric) %>% 
+  stat.desc(., basic=F)  %>% 
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+# Run a more limited set of statistics:
+
+
+
+```
+
+```{r describe_by_group, collapse=TRUE}
+
+
+
+
+
+
+
+
+```
+
+
+
