@@ -18,11 +18,11 @@ library(kableExtra)
 
 ```
 
-This presentation will cover:
-*   How to make summary tables with the tabyl function of the janitor package.
-*   How to make summary tables with the describe function of the Hmisc/psych packages.
-*   How to make sumamry tables with the summaryM function of the Hmisc package.
-*   How to make tables look better with the kable and KableExtra packages.
+<h3>This presentation will cover:</h3><p>
+*   How to make summary tables with the tabyl function of the janitor package.<p>
+*   How to make summary tables with the describe function of the Hmisc/psych packages.<p>
+*   How to make sumamry tables with the summaryM function of the Hmisc package.<p>
+*   How to make tables look better with the kable and KableExtra packages.<p>
 
 
 ---
