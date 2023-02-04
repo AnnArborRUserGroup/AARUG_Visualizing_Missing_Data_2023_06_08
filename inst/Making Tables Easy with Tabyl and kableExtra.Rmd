@@ -26,6 +26,8 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(janitor)
 library(kableExtra)
+library(magrittr)
+library(tidyverse)
 
 
 ```
