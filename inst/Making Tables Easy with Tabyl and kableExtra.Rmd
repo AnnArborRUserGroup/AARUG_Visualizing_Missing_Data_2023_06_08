@@ -10,12 +10,6 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
-
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-## Load libraries:<p> {.flexbox .vcenter}
-
 
 ```{r load-libraries}
 
@@ -29,6 +23,13 @@ library(tidyverse)
 
 
 ```
+
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+
 
 <h4>This presentation will cover:</h4><p>
 *   How to make summary tables with the tabyl function of the janitor package.<p>
