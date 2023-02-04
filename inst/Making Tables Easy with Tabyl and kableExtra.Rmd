@@ -2,8 +2,9 @@
 title: "Making Tables Easy with Tabyl and kableExtra"
 author: "Barry DeCicco"
 date: "For Ann Arbor R Users' Group, Feb 9, 2023"
-output: ioslides_presentation
-  template: quarterly-report.html
+output:
+  ioslides_presentation:
+    template: quarterly-report.html
 
 ---
 
@@ -35,20 +36,23 @@ library(tidyverse)
 *   How to make tables look better with the kable and KableExtra packages.<p>
 
 
+## Janitor and the Tabyl function:
+
+*   The janitor package has many cleaning functions, plus the tabyl fuction,
+for making tables.<p>
+*   Those tables can be enhanced with other functions in the janitor package.<p>
+*   they can be converted to data frames or tibbles, and then manipulated
+with other R commands, such as dplyr.<p>
+*   Data frames can be rendered by the kable and kableExtra packages, 
+for better printing.<p>
 
 
 
+## Data - mtcars:
 
-```{r}
-
-```
-
-
-
-
-## This will use the 'mtcars' data set built into base R, and a subset (first 5 rows / first 4 columns) which will be called 'dt':
-
-
+*   This presentation will use the 'mtcars' data set built into base R, 
+and a subset (first 5 rows / first 4 columns) which will be called 'dt'.
+*   This will then be enhanced.
 
 ```{r cars_print_1, echo = TRUE}
 
@@ -170,9 +174,9 @@ mtcars %>%
 
 
 
-## The kableExtra package
+# The kableExtra package
 
-### This package allows easy html tables - here is the simplest:
+## This package allows easy html tables - here is the simplest:
 
 
 ```{r kableExtra_1, echo =TRUE}
