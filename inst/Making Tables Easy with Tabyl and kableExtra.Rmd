@@ -6,10 +6,20 @@ output: ioslides_presentation
 
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
 ## Load libraries:<p> {.flexbox .vcenter}
 
 
-```{r setup, include=TRUE, echo=TRUE}  
+```{r```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
 
 # load libraries as needed:
 
