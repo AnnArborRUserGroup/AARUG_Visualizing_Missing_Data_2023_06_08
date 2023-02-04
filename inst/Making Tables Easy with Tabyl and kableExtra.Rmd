@@ -3,6 +3,7 @@ title: "Making Tables Easy with Tabyl and kableExtra"
 author: "Barry DeCicco"
 date: "For Ann Arbor R Users' Group, Feb 9, 2023"
 output: ioslides_presentation
+  template: quarterly-report.html
 
 ---
 
@@ -26,7 +27,7 @@ library(tidyverse)
 
 
 ## This presentation will cover {.flexbox .vcenter}
-<div class="centered">
+
 
 *   How to make summary tables with the tabyl function of the janitor package.<p>
 *   How to make summary tables with the describe function of the Hmisc/psych packages.<p>
@@ -34,7 +35,7 @@ library(tidyverse)
 *   How to make tables look better with the kable and KableExtra packages.<p>
 
 
-</div>
+
 
 
 
