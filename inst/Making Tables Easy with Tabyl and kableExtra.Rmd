@@ -3,6 +3,7 @@ title: "Making Tables Easy with Tabyl and kableExtra"
 author: "Barry DeCicco"
 date: "For Ann Arbor R Users' Group, Feb 9, 2023"
 output: ioslides_presentation
+
 ---
 
 ## Load libraries:
