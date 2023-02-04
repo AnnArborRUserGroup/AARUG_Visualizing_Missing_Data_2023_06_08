@@ -1,13 +1,13 @@
 ---
 title: "Making Tables Easy with Tabyl and kableExtra"
 author: "Barry DeCicco"
-date: "For Ann Arbor R Users' Group, May 14, 2020"
+date: "For Ann Arbor R Users' Group, Feb 9, 2023"
 output: ioslides_presentation
 ---
 
 ## Load libraries:
 
-```{r setup,  include=FALSE}  
+```{r setup,  include=FALSE, echo=FALSE}  
 
 # load libraries as needed:
 
@@ -18,8 +18,24 @@ library(kableExtra)
 
 ```
 
-## This will use the 'mtcars' data set built into base R, and a subset (first 5 rows / first 4 columns) which will be called 'dt':
+This presentation will cover:
+*   How to make summary tables with the tabyl function of the janitor package.
+*   How to make summary tables with the describe function of the Hmisc/psych packages.
+*   How to make sumamry tables with the summaryM function of the Hmisc package.
+*   How to make tables look better with the kable and KableExtra packages.
 
+
+---
+
+
+```{r}
+
+```
+
+
+
+
+## This will use the 'mtcars' data set built into base R, and a subset (first 5 rows / first 4 columns) which will be called 'dt':
 
 
 
