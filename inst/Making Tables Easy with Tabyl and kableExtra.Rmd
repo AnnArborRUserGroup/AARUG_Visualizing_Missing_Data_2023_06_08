@@ -6,7 +6,7 @@ output: ioslides_presentation
 
 ---
 
-<h3>Load libraries:</h3><p>
+## Load libraries:<p> {.flexbox .vcenter}
 
 
 ```{r setup, include=TRUE, echo=TRUE}  
