@@ -9,7 +9,7 @@ output: ioslides_presentation
 <h3>Load libraries:</h3><p>
 
 
-```{r setup}  
+```{r setup, include=TRUE, echo=TRUE}  
 
 # load libraries as needed:
 
@@ -20,7 +20,7 @@ library(kableExtra)
 
 ```
 
-<h3>This presentation will cover:</h3><p>
+<h4>This presentation will cover:</h4><p>
 *   How to make summary tables with the tabyl function of the janitor package.<p>
 *   How to make summary tables with the describe function of the Hmisc/psych packages.<p>
 *   How to make sumamry tables with the summaryM function of the Hmisc package.<p>
