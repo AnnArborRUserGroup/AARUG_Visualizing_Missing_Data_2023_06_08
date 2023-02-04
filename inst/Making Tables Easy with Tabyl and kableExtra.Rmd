@@ -17,9 +17,7 @@ This is an R Markdown presentation. Markdown is a simple formatting syntax for a
 ## Load libraries:<p> {.flexbox .vcenter}
 
 
-```{r```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
+```{r load-libraries}
 
 # load libraries as needed:
 
