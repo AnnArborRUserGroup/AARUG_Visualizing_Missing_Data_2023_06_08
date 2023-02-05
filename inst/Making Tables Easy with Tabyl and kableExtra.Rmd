@@ -176,7 +176,9 @@ mtcars %>%
 
 # The kableExtra package
 
-## This package allows easy html tables - here is the simplest:
+## This package allows easy html/latex/rtf tables (we will stick with html here).
+
+Here is the simplest, with no options:
 
 
 ```{r kableExtra_1, echo =TRUE}
