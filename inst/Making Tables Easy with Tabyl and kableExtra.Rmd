@@ -245,6 +245,26 @@ dt                     %>%
 - Controlling the cells (e.g., conditional highlighting).
 - Linking to other locations.
 
+
+# Hmisc Package for Summarizing Data:
+
+The summarize function in R can be slow for many variables.
+The 'summaryM' command in the Hmisc package can do a lot of comparisons
+quickly, producing a nice table.
+
+```{r summaryM}
+
+s <- Hmisc::summaryM( mpg + disp + hp + drat + wt + qsec + vs + am + gear + carb
+  ~ cyl 
+  ,data=mtcars
+)
+
+htmtools::HTML(s)
+
+```
+
+
+
 ### ...many, many other things.
 
 ## Questions?
