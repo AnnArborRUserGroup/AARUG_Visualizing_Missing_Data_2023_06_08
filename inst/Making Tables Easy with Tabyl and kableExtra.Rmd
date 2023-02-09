@@ -254,12 +254,23 @@ quickly, producing a nice table.
 
 ```{r summaryM}
 
-s <- Hmisc::summaryM( mpg + disp + hp + drat + wt + qsec + vs + am + gear + carb
+s <- Hmisc::summaryM( 
+  mpg + disp + hp + drat + wt + qsec + vs + am + gear + carb
   ~ cyl 
-  ,data=mtcars
+  ,data=mtcars,
+  overall = TRUE,
+  test = TRUE
 )
 
-htmtools::HTML(s)
+Hmisc::html(s,
+            caption =  , 
+            exclude1,
+            npct = 'both',
+            digits = 3,
+            prmsd = TRUE,
+            brmsd = TRUE,
+            mdsize = mus$maller2
+            )
 
 ```
 
