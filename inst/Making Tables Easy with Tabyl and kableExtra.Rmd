@@ -250,9 +250,9 @@ dt                     %>%
 
 The summarize function in R can be slow for many variables. The 'summaryM' command in the Hmisc package can do a lot of comparisons quickly, producing a nice table.
 
-## Code:
+## Running the summary:
 
-```{r summaryM, echo =TRUE, warning=FALSE}
+```{r summaryM, echo =TRUE, warning=FALSE, include=TRUE}
 
 s <- Hmisc::summaryM( 
   mpg + disp + hp + drat + wt + qsec + vs + am + gear + carb
@@ -262,8 +262,15 @@ s <- Hmisc::summaryM(
   test = TRUE
 )
 
-Hmisc::html(s,
-            caption =  , 
+```
+
+
+## Printing the summary:
+
+``````{r print-summaryM, echo =TRUE, warning=FALSE, include=TRUE}
+
+print_summary <- Hmisc::html(s,
+            caption = 'Summary of Mtcars data set' , 
             exclude1,
             npct = 'both',
             digits = 3,
@@ -272,8 +279,17 @@ Hmisc::html(s,
             mdsize = mus$maller2
             )
 
+htmltools::save_html(print_summary, "print_summary.html")
+
+
 ```
 
+## Image of the summary:
+
+
+```{r include-print_summary, child='print_summary.html', echo =TRUE, warning=FALSE, include=TRUE}
+
+```
 
 
 ## Questions?
@@ -283,4 +299,11 @@ Hmisc::html(s,
  - The janitor package vignette:  https://garthtarr.github.io/meatR/janitor.html
  
  - The kableExtra package:  https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#html_only_features
+ 
+ - The Hmisc package: 
+    - Hmisc: https://www.rdocumentation.org/packages/Hmisc/versions/4.7-2
+    - summaryM: Summarize Mixed Data Types vs. Groups:
+    https://www.rdocumentation.org/packages/Hmisc/versions/4.7-2/topics/summaryM
+    
+    
 
