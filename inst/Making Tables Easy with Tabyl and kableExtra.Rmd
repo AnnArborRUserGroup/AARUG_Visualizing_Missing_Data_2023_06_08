@@ -292,7 +292,7 @@ htmltools::save_html(print_summary, "print_summary.html")
 ```
 
 ## Summary 
-```{r summarytools, dev=c('png')}
+```{r summarytools, asis, dev=c('png')}
 
 dfSummary(mtcars)
 ```
