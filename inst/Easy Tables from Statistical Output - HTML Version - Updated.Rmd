@@ -1,7 +1,7 @@
 ---
-title: "Making Tables Easy with Tabyl and kableExtra (Web Version)"
+title: Easy Tables from Statistical Output (web version)"
 author: "Barry DeCicco"
-date: "For ABS Network Presentation, May 3, 2023"
+date: "For Ann Arbor R Users' Group Meetup, May 11, 2023"
 output:  
   html_document:
     toc: true
@@ -28,6 +28,12 @@ library(kableExtra)
 library(magrittr)
 library(tidyverse)
 library(summarytools)
+library(xtable)
+library(broom)
+library(tidyr)
+
+
+
 ```
 
 
