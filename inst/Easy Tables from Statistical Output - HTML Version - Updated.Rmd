@@ -31,7 +31,8 @@ library(summarytools)
 library(xtable)
 library(broom)
 library(tidyr)
-
+library(foreign)
+library(haven)
 
 
 ```
@@ -66,21 +67,25 @@ and extract items 'by hand'.
 
 # Data - mtcars:
 
-*   This presentation will use the 'mtcars' data set built into base R, 
-and a subset (first 5 rows / first 4 columns) which will be called 
-'mtcars_trimmed'.
-*   This will then be enhanced.
+*   This presentation will use the 'BodyFat' data set built used as a sample set for SPSS (available at http://calcnet.mth.cmich.edu/org/spss/prjs_datasets.htm )
+
+
 
 ```{r cars_print_1, echo = TRUE}
 
-head(mtcars)
+
+bodyfat <- read_sav("bodyfat.sav")
+
+bodyfat %>% 
+  kable()
 
 ```
 
 ## mtcars_trimmed:
 
 ```{r cars_print_2, echo = TRUE}
-mtcars_trimmed <- mtcars[1:5, 1:4]
+
+
 print(mtcars_trimmed)
 
 ```
