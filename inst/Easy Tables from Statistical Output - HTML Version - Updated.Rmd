@@ -537,7 +537,7 @@ use it separately:
 save_kable(file = "table1.html", self_contained = T)
 
 
-```{r kableExtra_10, echo =TRUE, eval=TRUE}
+```{r kableExtra_11, echo =TRUE, eval=TRUE}
 
 
 title_date = format(Sys.time(), '%d %B, %Y')
