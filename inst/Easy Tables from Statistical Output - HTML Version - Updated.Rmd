@@ -108,6 +108,7 @@ lm1
 ```
 
 
+
 ```{r class-lm, echo =TRUE}
 
 class(lm1)
@@ -128,6 +129,55 @@ str(lm1)
 
 ```
 
+
+You can extract the parts of the object, examine them and then use them:
+
+```{r extract-coefficients-lm}
+
+lm1$coefficients
+
+```
+
+
+```{r structure-coefficients-lm}
+
+names(lm1$coefficients)
+str(lm1$coefficients)
+
+
+```
+
+
+```{r extract-coefficients-lm}
+
+class(lm1$coefficients)
+dim(lm1$coefficients)
+length(lm1$coefficients)
+lm1$coefficients[1]
+lm1$coefficients[2]
+
+```
+
+
+You can also use the summary - this will print out different information
+depending on the class of the object:
+
+
+```{r summary-lm, echo =TRUE}
+
+summary(lm1) 
+
+```
+
+
+By examining the structure of the summary you can get another view of the object:
+
+
+```{r str-summary-lm, echo =TRUE}
+
+str(summary(lm1) )
+
+```
 
 
 
