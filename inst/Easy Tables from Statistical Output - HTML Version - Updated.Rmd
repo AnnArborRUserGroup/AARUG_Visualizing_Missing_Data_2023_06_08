@@ -74,7 +74,7 @@ and extract items 'by hand'.
 ```{r load-bodyfat-data-set, echo = TRUE}
 
 
-bodyfat <- read_sav("bodyfat.sav")
+bodyfat_df <- read_sav("bodyfat.sav")
 
 ```
 
@@ -82,39 +82,56 @@ bodyfat <- read_sav("bodyfat.sav")
 
 ```{r print-bodyfat-data-set, echo = TRUE}
 
-print(bodyfat)
+print(bodyfat_df)
 
 ```
 
 
-# The janitor package
-
-## The janitor does 'clean up' tasks:
-
- - Perfectly format data frame column names;
- - Isolate partially-duplicate records; and
- - Provide quick tabulations (i.e., frequency tables and crosstabs).
-
-## For now, just look at the tabulations, which are done with 'tabyl()'
+# Basic Structure of Output
 
 
+ - Assign the output of a model to an object.
+ - Use 'class()' to find out the class of the output object (you can then google it)
+ - Use the 'names()' function to find the names of the major components of the object.
+ - Use the 'str()' to get a breakdown of the object's components
 
-## Basic Table:
+## Simple Linear Model
 
+Typing the object's name gives some basic information.
 
+```{r run-lm, echo =TRUE}
 
-```{r tabyl_1, echo =TRUE}
-
-
-
-mtcars %>% 
-  tabyl(gear, cyl, show_NA = TRUE)
-
-
-
+lm1 <- lm(y ~ x1, data= bodyfat_df)
 
 ```
 
+
+```{r print-lm, echo =TRUE}
+
+lm1 
+
+```
+
+
+```{r class-lm, echo =TRUE}
+
+class(lm1)
+
+```
+
+
+```{r names-lm, echo =TRUE}
+
+names(lm1)
+
+```
+
+
+```{r str-lm, echo =TRUE}
+
+str(lm1)
+
+```
 
 ## Adding to the Basic Tables, using 'Adorn':
 
