@@ -65,28 +65,24 @@ and extract items 'by hand'.
 
 
 
-# Data - mtcars:
+# Data - bodyfat.sav:
 
 *   This presentation will use the 'BodyFat' data set built used as a sample set for SPSS (available at http://calcnet.mth.cmich.edu/org/spss/prjs_datasets.htm )
 
 
 
-```{r cars_print_1, echo = TRUE}
+```{r load-bodyfat-data-set, echo = TRUE}
 
 
 bodyfat <- read_sav("bodyfat.sav")
 
-bodyfat %>% 
-  kable()
-
 ```
 
-## mtcars_trimmed:
+## Body Fat Data Set:
 
-```{r cars_print_2, echo = TRUE}
+```{r print-bodyfat-data-set, echo = TRUE}
 
-
-print(mtcars_trimmed)
+print(bodyfat)
 
 ```
 
