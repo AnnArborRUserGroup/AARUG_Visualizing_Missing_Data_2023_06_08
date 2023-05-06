@@ -1,5 +1,5 @@
 ---
-title: Easy Tables from Statistical Output (web version)"
+title: Easy Tables from Statistical Output (web version)
 author: "Barry DeCicco"
 date: "For Ann Arbor R Users' Group Meetup, May 11, 2023"
 output:  
