@@ -154,52 +154,6 @@ mtcars %>%
 
 # What Else Can You Do with the Results?
 
-You can use the command '' to export the table to a file, if you would like to
-use it separately:
-
-save_kable(file = "table1.html", self_contained = T)
-
-
-```{r kableExtra_11, echo =TRUE, eval=TRUE}
-
-
-title_date = format(Sys.time(), '%d %B, %Y')
-
-T1cap <- paste0("<center><strong>TITLE TEXT GOES HERE,<br/>", title_date, "</strong></center>>")
-FN1   <- paste("<strong>FOOTNOTE TEXT GOES HERE</strong>")
-mtcars            %>% 
-  kable(caption = T1cap, 
-        escape = FALSE,
-        col.names = c(
-                      "Miles per<br/>Gallon",
-                      "Cylinders",
-                      "Displacement",
-                      "Horsepower",
-                      "Rear Axle<br/>Ratio",
-                      "Weight",
-                      "Quarter Mile<br/>
-                      Seconds",
-                      "V vs Straight<br/>Line",
-                      "Automatic vs <br/> Manual Transmission",
-                      "Gear",
-                      "Carburetors"
-                      ))              %>%
-  kable_styling(bootstrap_options = 
-                  c("striped", "hover", "condensed", "responsive",
-                    full_width = F, position = "center")
-                ) %>% 
-  column_spec(1, width = "3cm",bold = TRUE) %>%   
-  column_spec(2:5, width = "3cm") %>% 
-  kable_styling(fixed_thead = T)  %>% 
-  add_header_above(c(" " = 2, "Middle 4 Columns" = 4, 
-                     "Last 5 Columns" = 5, " ")) %>% 
-  add_header_above(c(" " = 4, "Group 1" = 5, " " = 3)) %>%
-  add_header_above(c(" "=1,"Everything" = 11)) %>% 
-  footnote(general = FN1, general_title = "Note: ", footnote_as_chunk = TRUE) %>% 
-  scroll_box(width = "75%", height = "500px") %>% 
-  save_kable(file = "table1.html", self_contained = T)
- 
-
 
 
 ```
