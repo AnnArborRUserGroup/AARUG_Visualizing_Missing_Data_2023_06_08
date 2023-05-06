@@ -37,24 +37,30 @@ library(tidyr)
 ```
 
 
-# This presentation will cover {.flexbox .vcenter}
+# Making tables from Statistical Output
 
+Copying and pasting statistical output is time-consuming
+and prone to errors.  When multiple analyses need to be run,
+it's even worse.
 
-*   How to make summary tables with the tabyl function of the janitor package.<p>
-*   How to make summary tables with the describe function of the Hmisc/psych packages.<p>
-*   How to make sumamry tables with the summaryM function of the Hmisc package.<p>
+R has multiple ways to extract organized statistical ouput into data frames or tables. At that point the information is easily understood 
+and renderable in documents and presentations.
+
+ This presentation will cover {.flexbox .vcenter}
+
+*   The nature of R statistical output and how to explore it
+and extract items 'by hand'.
+
+*   How to use the **xtable** pacakge to extract and organize output.<p>
+
+*   How to use the **broom** package to clean and tidy output.<p>
+
 *   How to make tables look better with the kable and KableExtra packages.<p>
 
 
 # Janitor and the Tabyl function:
 
-*   The janitor package has many cleaning functions, plus the tabyl fuction,
-for making tables.<p>
-*   Those tables can be enhanced with other functions in the janitor package.<p>
-*   they can be converted to data frames or tibbles, and then manipulated
-with other R commands, such as dplyr.<p>
-*   Data frames can be rendered by the kable and kableExtra packages, 
-for better printing.<p>
+
 
 
 
