@@ -105,6 +105,7 @@ lm1 <- lm(y ~ x1, data= bodyfat_df)
 
 lm1 
 
+
 ```
 
 
@@ -178,7 +179,15 @@ By examining the structure of the summary you can get another view of the object
 str(summary(lm1) )
 
 ```
+At this point you can attempt to access the coefficients *and* the std. errors:
 
+```{r coefficients-standard-errors-lm1}
+
+summary(lm1)$coefficients
+class(summary(lm1)$coefficients)
+
+```
+The estimated effect of X1 is `r summary(lm1)$coefficients[2,1]`
 
 
 # What Else Can You Do with the Results?
