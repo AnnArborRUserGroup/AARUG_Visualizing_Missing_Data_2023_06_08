@@ -192,12 +192,12 @@ You can now use these values in text:
 
 ```{r use-values-in-text, echo =TRUE}
 
-# The estimated effect of X1 is: `r round(summary(summary_coefficients[2,1],2)`; 
+# The estimated effect of X1 is: `r round(summary_coefficients[2,1],2)`; 
 # standard error is: `r round(summary_coefficients[2,2],2)`.
 
 ```
 
-The estimated effect of X1 is: `r round(summary(summary_coefficients[2,1],2)`; 
+The estimated effect of X1 is: `r round(summary_coefficients[2,1],2)`; 
 standard error is: `r round(summary_coefficients[2,2],2)`.
 
 
