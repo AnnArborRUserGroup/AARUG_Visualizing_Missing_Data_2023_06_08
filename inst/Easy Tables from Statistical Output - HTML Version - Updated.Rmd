@@ -133,7 +133,7 @@ str(lm1)
 
 You can extract the parts of the object, examine them and then use them:
 
-```{r extract-coefficients-lm}
+```{r print-coefficients-lm}
 
 lm1$coefficients
 
