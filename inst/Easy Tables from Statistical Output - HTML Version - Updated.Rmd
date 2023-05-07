@@ -190,9 +190,19 @@ class(summary(lm1)$coefficients)
 
 You can now use these values in text:
 
+```{r use-values-in-text}
 
-The estimated effect of X1 is: `r round(summary(lm1)$coefficients[2,1])`; 
-standard error is: `r round(summary(lm1)$coefficients[2,2])`.
+# The estimated effect of X1 is: `r round(summary(lm1)$coefficients[2,1],2)`; 
+# standard error is: `r round(summary(lm1)$coefficients[2,2],2)`.
+
+```
+
+
+The estimated effect of X1 is: `r round(summary(lm1)$coefficients[2,1],2)`; 
+standard error is: `r round(summary(lm1)$coefficients[2,2],2)`.
+
+
+
 
 
 # What Else Can You Do with the Results?
