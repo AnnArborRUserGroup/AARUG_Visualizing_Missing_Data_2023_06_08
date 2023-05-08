@@ -202,7 +202,15 @@ standard error is: `r round(summary_coefficients[2,2],2)`.
 
 And so on.  
 
-You could also run chunks through kable, 
+You could also run chunks through kable, to get a nice looking table for use in 
+papers or presentations:
+
+```{r, echo =TRUE}
+
+summary_coefficients %>% kable()
+
+```
+
 
 
 
