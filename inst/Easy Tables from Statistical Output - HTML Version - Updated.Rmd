@@ -209,7 +209,7 @@ And so on.
 You could also run chunks through kable, to get a nice looking table for use in 
 papers or presentations:
 
-```{r, echo =TRUE}
+```{r, echo =TRUE, eval=FALSE}
 
 summary_coefficients %>% 
   as.data.frame() %>% 
