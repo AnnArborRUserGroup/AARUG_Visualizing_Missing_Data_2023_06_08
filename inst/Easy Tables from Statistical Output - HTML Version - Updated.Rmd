@@ -68,8 +68,7 @@ and extract items 'by hand'.
 
 ```{r load-bodyfat-data-set, echo = TRUE}
 
-
-bodyfat_df <- read_sav("bodyfat.sav")
+bodyfat <- read_sav("inst/extdata/bodyfat.sav")
 
 ```
 
