@@ -213,13 +213,12 @@ papers or presentations:
 
 summary_coefficients %>% 
   as.data.frame() %>% 
-  dplyr::mutate(across(where(is.numeric)), round) %>% 
+  dplyr::mutate(across(where(is.numeric), round,2)) %>% 
   kable() %>% 
-kable_styling(bootstrap_options = 
+  kable_styling(bootstrap_options = 
                   c("striped", "hover", "condensed", "responsive",
                     full_width = F, position = "center")
-                ) 
-
+  ) 
 
 ```
 
