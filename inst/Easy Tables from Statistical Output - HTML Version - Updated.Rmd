@@ -207,7 +207,13 @@ papers or presentations:
 
 ```{r, echo =TRUE}
 
-summary_coefficients %>% kable()
+summary_coefficients %>% 
+  kable() %>% 
+kable_styling(bootstrap_options = 
+                  c("striped", "hover", "condensed", "responsive",
+                    full_width = F, position = "center")
+                ) 
+
 
 ```
 
