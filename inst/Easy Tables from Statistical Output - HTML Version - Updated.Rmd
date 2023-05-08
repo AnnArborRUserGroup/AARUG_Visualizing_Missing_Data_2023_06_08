@@ -13,10 +13,6 @@ output:
 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
 
 ```{r load-libraries, include=FALSE}
 
@@ -33,9 +29,18 @@ library(broom)
 library(tidyr)
 library(foreign)
 library(haven)
-
+library(here)
 
 ```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+here::i_am(path = "inst/Easy Tables from Statistical Output - HTML Version - Updated.Rmd")
+
+```
+
 
 
 # Making tables from Statistical Output
@@ -68,7 +73,7 @@ and extract items 'by hand'.
 
 ```{r load-bodyfat-data-set, echo = TRUE}
 
-bodyfat <- read_sav("bodyfat.sav")
+bodyfat <- read_sav(here("inst/extdata/bodyfat.sav"))
 
 ```
 
