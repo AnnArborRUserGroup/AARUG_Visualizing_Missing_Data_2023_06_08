@@ -209,7 +209,7 @@ And so on.
 You could also run chunks through kable, to get a nice looking table for use in 
 papers or presentations:
 
-```{r, echo =TRUE, eval=FALSE}
+```{r, echo =TRUE, eval=TRUE}
 
 summary_coefficients %>% 
   as.data.frame() %>% 
@@ -222,6 +222,22 @@ summary_coefficients %>%
 
 ```
 
+
+** Problem:  **
+
+This can be tedious, and has to be redone for each different model or analysis.
+It does give you custom results, but at the usual cost. What alternatives are there?
+
+
+# The xtable Package:
+
+*   The xtable package generates tables from various objects, well-formatted for 
+use in papers and presentations.
+
+*   xtable will examine the input object, and format it as needed.  
+
+*   Objects created by xtable can be exported, to be used in other applications/
+documents.
 
 
 
