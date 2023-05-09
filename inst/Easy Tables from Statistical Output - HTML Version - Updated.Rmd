@@ -223,13 +223,17 @@ summary_coefficients %>%
 ```
 
 
-<h4>** Problem:  **</h4>
+<h2>** Problem:  **</h2>
 
 This can be tedious, and has to be redone for each different model or analysis.
 It does give you custom results, but at the usual cost. What alternatives are there?
 
 
 # The xtable Package:
+
+*   The xtable package was designed to produce latex tables for export.
+
+*   It can also produce html tables.
 
 *   The xtable package generates tables from various objects, well-formatted for 
 use in papers and presentations.
@@ -239,7 +243,19 @@ use in papers and presentations.
 *   Objects created by xtable can be exported, to be used in other applications/
 documents.
 
+*   They can be brought back in from those external files.
 
+
+
+```{r xtable-bodyfat_df, echo = TRUE}
+
+xtable1 <- xtable(bodyfat_df)
+
+print(xtable1, type="html", file="xtable1.html")
+print(xtable1, type="latex", file="xtable1.tex")
+
+
+```
 
 
 
