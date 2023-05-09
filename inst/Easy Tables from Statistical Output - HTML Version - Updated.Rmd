@@ -4,6 +4,7 @@ author: "Barry DeCicco"
 date: "For Ann Arbor R Users' Group Meetup, May 11, 2023"
 output:  
   html_document:
+    css: style.css
     toc: true
     toc_depth: 3
     toc_float: true
@@ -304,7 +305,7 @@ htmltools::includeHTML("lm2_kable.html")
 
 # The Broom Package
 
-
+<h2>** Problem:  **</h2>
 
 
 ```
