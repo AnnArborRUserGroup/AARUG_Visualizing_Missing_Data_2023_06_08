@@ -223,7 +223,7 @@ summary_coefficients %>%
 ```
 
 
-** Problem:  **
+<h6>** Problem:  **</h6>
 
 This can be tedious, and has to be redone for each different model or analysis.
 It does give you custom results, but at the usual cost. What alternatives are there?
