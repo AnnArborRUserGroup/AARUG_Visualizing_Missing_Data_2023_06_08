@@ -264,6 +264,24 @@ htmltools::includeHTML("xtable1.html")
 
 ```
 
+## Other examples:
+
+```{r xtable-lm2, echo=TRUE}
+lm2 <- aov(y ~ x1 + x2 + x3 , data = bodyfat_df)
+print(xtable(fm1), type = "html", file = "lm2.html")
+
+```
+
+
+```{r insert-xtable-lm2,echo=TRUE}
+
+htmltools::includeHTML("xtable1.html")
+
+```
+
+
+
+
 
 # What Else Can You Do with the Results?
 
