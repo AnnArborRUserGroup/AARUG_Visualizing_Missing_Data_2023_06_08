@@ -282,15 +282,14 @@ htmltools::includeHTML("lm2.html")
 
 ```
 
-```{r create-lm2_kable}
+```{r create-lm2_kable,echo=TRUE}
 
 lm2_kable <- xtable(lm2) %>% 
   xtable2kable(booktabs = TRUE) %>% 
   kable_styling(latex_options = "striped") 
 
+save_kable(lm2_kable, file = "lm2_kable.html")
 
-  print(lm2_kable, type = "html", file = "lm2_kable.html")
-  
 
 ```
 
