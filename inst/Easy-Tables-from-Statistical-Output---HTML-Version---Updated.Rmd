@@ -37,7 +37,7 @@ library(here)
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-here::i_am(path = "inst/Easy Tables from Statistical Output - HTML Version - Updated.Rmd")
+here::i_am(path = "inst/Easy-Tables-from-Statistical-Output---HTML-Version---Updated.Rmd")
 
 ```
 
@@ -296,7 +296,7 @@ save_kable(lm2_kable, file = "lm2_kable.html")
 
 
 
-```{r insert-xtable-lm2_kable,echo=TRUE}
+```{r insert-xtable-lm2_kable,echo=TRUE, eval=FALSE}
 
 htmltools::includeHTML("lm2_kable.html")
 
