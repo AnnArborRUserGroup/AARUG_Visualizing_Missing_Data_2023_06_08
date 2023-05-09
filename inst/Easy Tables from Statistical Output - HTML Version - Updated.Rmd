@@ -258,6 +258,12 @@ print(xtable1, type="latex", file="xtable1.tex")
 ```
 
 
+```{r, echo=TRUE}
+
+htmltools::includeHTML("xtable1.html")
+
+```
+
 
 # What Else Can You Do with the Results?
 
