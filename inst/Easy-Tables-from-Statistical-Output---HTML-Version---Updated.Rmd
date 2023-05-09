@@ -283,57 +283,30 @@ htmltools::includeHTML("lm2.html")
 
 ```
 
-```{r create-lm2_kable,echo=TRUE, eval=TRUE}
-
-lm2_kable <- xtable(lm2) %>% 
-  xtable2kable(booktabs = TRUE) %>% 
-  kable_styling(latex_options = "striped") 
-
-save_kable(lm2_kable, file = "lm2_kable.html")
-
-
-```
-
-
-
-
-```{r insert-xtable-lm2_kable,echo=TRUE, eval=FALSE}
-
-htmltools::includeHTML("lm2_kable.html")
-
-```
 
 # The Broom Package
 
+The broom package is part of the tidymodels package.
+The goal is to convert output into tidy data frames for easy manipulation 
 
+It has 3 main functions:
 
-
-```
-
-# Using Kable with Other Packages.
-
-Some other packages have an '...2kable() function to allow you to use kable:
-
-xtable2kable()
-For the 'table' package, use toKable()
-
-## Other things: 
-
-- Formatting headers (e.g., a higher row covering groups of variables)
-- Controlling the cells (e.g., conditional highlighting).
-- Linking to other locations.
-
-
-
+*   tidy() summarizes information about model components
+*   glance() reports information about the entire model
+*   augment() adds informations about observations to a dataset
 
 
 # Questions?
 
 # References:
 
- - The janitor package vignette:  https://garthtarr.github.io/meatR/janitor.html
+*   The xtable package:
+  *   The xtable Gallery (google it; the link is problematic)
+    
  
- - The kableExtra package:  https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+*   The broom package:  
+  *   https://broom.tidymodels.org/
+  *   https://broom.tidymodels.org/articles/broom.html  
  
 
 
