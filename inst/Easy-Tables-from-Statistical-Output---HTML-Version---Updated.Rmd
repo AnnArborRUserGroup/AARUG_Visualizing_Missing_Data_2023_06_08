@@ -4,6 +4,7 @@ author: "Barry DeCicco"
 date: "For Ann Arbor R Users' Group Meetup, May 11, 2023"
 output:  
   html_document:
+      css: style.css
     toc: true
     toc_depth: 3
     toc_float: true
@@ -282,7 +283,7 @@ htmltools::includeHTML("lm2.html")
 
 ```
 
-```{r create-lm2_kable,echo=TRUE}
+```{r create-lm2_kable,echo=TRUE, eval=FALSE}
 
 lm2_kable <- xtable(lm2) %>% 
   xtable2kable(booktabs = TRUE) %>% 
