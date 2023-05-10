@@ -295,6 +295,8 @@ It has 3 main functions:
 *   glance() reports information about the entire model
 *   augment() adds informations about observations to a dataset
 
+## tidy()
+
 ```{r tidy-lm2,echo=TRUE }
 
 tidy_lm2 <- broom::tidy(lm2)
@@ -304,6 +306,20 @@ class(tidy_lm2)
 
 
 ```
+
+
+## glance()
+
+```{r glance-lm2,echo=TRUE }
+
+glance_lm2 <- broom::glance(lm2)
+
+glance_lm2
+class(glance_lm2)
+
+
+```
+
 
 # Questions?
 
