@@ -295,18 +295,27 @@ It has 3 main functions:
 *   glance() reports information about the entire model
 *   augment() adds informations about observations to a dataset
 
+```{r tidy-lm2,echo=TRUE }
+
+tidy_lm2 <- broom::tidy(lm2)
+
+tidy_lm2
+class(tidy_lm2)
+
+
+```
 
 # Questions?
 
 # References:
 
 *   The xtable package:
-  *   The xtable Gallery (google it; the link is problematic)
+  +   The xtable Gallery (google it; the link is problematic)
     
  
 *   The broom package:  
-  *   https://broom.tidymodels.org/
-  *   https://broom.tidymodels.org/articles/broom.html  
+  +   https://broom.tidymodels.org/
+  +   https://broom.tidymodels.org/articles/broom.html  
  
 
 
