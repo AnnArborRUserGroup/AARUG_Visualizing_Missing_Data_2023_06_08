@@ -321,6 +321,19 @@ class(glance_lm2)
 ```
 
 
+## augment()
+
+```{r augment-lm2,echo=TRUE }
+
+augment_lm2 <- broom::augment(lm2, bodyfat_df)
+
+augment_lm2
+class(augment_lm2)
+
+
+````
+
+
 # Questions?
 
 # References:
