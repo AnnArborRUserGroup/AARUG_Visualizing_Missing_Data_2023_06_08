@@ -62,7 +62,6 @@ and extract items 'by hand'.
 
 *   How to use the **broom** package to clean and tidy output.<p>
 
-*   How to make tables look better with the kable and KableExtra packages.<p>
 
 
 
@@ -304,8 +303,15 @@ residuals, etc.
 
 tidy_lm2 <- broom::tidy(lm2)
 
-tidy_lm2
-class(tidy_lm2)
+tidy_lm2 %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = 
+                  c("striped", "hover", "condensed", "responsive",
+                    full_width = F, position = "center")
+  ) 
+
+
+
 
 
 ```
