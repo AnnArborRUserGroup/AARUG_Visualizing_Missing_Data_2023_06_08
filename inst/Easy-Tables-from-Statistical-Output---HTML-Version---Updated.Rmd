@@ -274,6 +274,18 @@ print(lm2)
 print(xtable(lm2), type = "html", file = "lm2.html")
 
 ```
+```{r format-xtable. echo=TRUE}
+
+xtable_lm2 <- xtable(lm2)
+
+align(xtable_lm2) <- xalign(xtable_lm2)
+digits(xtable_lm2) <- xdigits(xtable_lm2)
+display(xtable_lm2) <- xdisplay(xtable_lm2)
+
+
+print(xtable_lm2, type = "html")
+
+```
 
 
 ```{r insert-xtable-lm2,echo=TRUE}
