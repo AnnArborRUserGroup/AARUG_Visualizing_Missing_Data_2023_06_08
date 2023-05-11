@@ -330,7 +330,7 @@ class(glance_lm2)
 
 augment_lm2 <- broom::augment(lm2, bodyfat_df)
 
-augment_lm2
+head(augment_lm2)
 class(augment_lm2)
 
 
