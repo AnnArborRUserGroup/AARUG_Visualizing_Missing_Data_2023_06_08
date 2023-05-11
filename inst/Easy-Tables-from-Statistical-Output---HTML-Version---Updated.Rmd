@@ -293,7 +293,10 @@ It has 3 main functions:
 
 *   tidy() summarizes information about model components
 *   glance() reports information about the entire model
-*   augment() adds informations about observations to a dataset
+*   augment() adds informations about observations back to a data set,
+usually the one used in the model, such as Cook's distance, fitted values,
+residuals, etc.
+
 
 ## tidy()
 
@@ -331,7 +334,9 @@ augment_lm2
 class(augment_lm2)
 
 
-````
+`
+
+```
 
 
 # Questions?
