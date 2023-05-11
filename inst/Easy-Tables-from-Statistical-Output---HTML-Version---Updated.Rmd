@@ -274,7 +274,7 @@ print(lm2)
 print(xtable(lm2), type = "html", file = "lm2.html")
 
 ```
-```{r format-xtable. echo=TRUE}
+```{r format-xtable, echo=TRUE}
 
 xtable_lm2 <- xtable(lm2)
 
