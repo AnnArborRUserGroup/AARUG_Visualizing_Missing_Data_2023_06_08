@@ -258,7 +258,7 @@ print(xtable1, type="latex", file="xtable1.tex")
 ```
 
 
-```{r, echo=TRUE}
+```{r include-xtable1, echo=TRUE}
 
 htmltools::includeHTML("xtable1.html")
 
