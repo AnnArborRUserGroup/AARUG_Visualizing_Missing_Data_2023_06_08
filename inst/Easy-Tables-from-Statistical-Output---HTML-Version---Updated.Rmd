@@ -302,6 +302,7 @@ residuals, etc.
 The tidy() function takes the output object and collects the components 
 into a data frame/tibble:
 
+This the raw lm() object:
 
 ```{r tidy-lm2,echo=TRUE }
 
@@ -311,6 +312,7 @@ lm2
 
 ```
 
+This is the tidied lm() object:
 
 ```{r print-tidy-lm2,echo=TRUE }
 
@@ -318,10 +320,13 @@ tidy_lm2
 
 ```
 
+Since this is a tibble (enhanced data frame), you can treat this like any 
+other data frame, using dply to manipulate it, or rendering it with kable():
 
 ```{r render-tidy-lm2,echo=TRUE }
 
 tidy_lm2 %>% 
+   dplyr::mutate(across(where(is.numeric), round,2)) %>% 
   kable() %>% 
   kable_styling(bootstrap_options = 
                   c("striped", "hover", "condensed", "responsive",
