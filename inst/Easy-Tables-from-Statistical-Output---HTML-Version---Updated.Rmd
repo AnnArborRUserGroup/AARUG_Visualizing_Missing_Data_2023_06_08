@@ -334,7 +334,6 @@ head(augment_lm2)
 class(augment_lm2)
 
 
-`
 
 ```
 
