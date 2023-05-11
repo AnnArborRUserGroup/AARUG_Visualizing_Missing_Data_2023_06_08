@@ -303,6 +303,13 @@ residuals, etc.
 
 tidy_lm2 <- broom::tidy(lm2)
 
+tidy_lm2 
+
+```
+
+
+```{r render-tidy-lm2,echo=TRUE }
+
 tidy_lm2 %>% 
   kable() %>% 
   kable_styling(bootstrap_options = 
@@ -310,12 +317,7 @@ tidy_lm2 %>%
                     full_width = F, position = "center")
   ) 
 
-
-
-
-
 ```
-
 
 ## glance()
 
