@@ -9,7 +9,7 @@ output:
     toc_depth: 3
     toc_float: true
     number_sections: true
-    code_folding:  hide
+    code_folding:  show
     
 
 ---
@@ -274,6 +274,18 @@ print(lm2)
 print(xtable(lm2), type = "html", file = "lm2.html")
 
 ```
+
+
+```{r insert-xtable-lm2,echo=TRUE}
+
+htmltools::includeHTML("lm2.html")
+
+```
+
+
+You can also improve the formatting (the default format is bad):
+
+
 ```{r format-xtable, echo=TRUE}
 
 xtable_lm2 <- xtable(lm2)
@@ -285,12 +297,17 @@ display(xtable_lm2) <- xdisplay(xtable_lm2)
 
 print(xtable_lm2, type = "html")
 
+print(xtable_lm2, type = "html", file = "xtable_lm2.html")
+
+
 ```
 
 
-```{r insert-xtable-lm2,echo=TRUE}
 
-htmltools::includeHTML("lm2.html")
+
+```{r insert-xtable_lm2,echo=TRUE}
+
+htmltools::includeHTML("xtable_lm2.html")
 
 ```
 
