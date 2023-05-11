@@ -337,17 +337,34 @@ tidy_lm2 %>%
 
 ## glance()
 
+glance() collects various statistics from the lm() object into a data frame (tibble).
+Again, this can be manipulated with all of the regular r tools.
+
 ```{r glance-lm2,echo=TRUE }
 
 glance_lm2 <- broom::glance(lm2)
 
 glance_lm2
-class(glance_lm2)
+
 
 
 ```
 
 
+```{r render-glance-lm2,echo=TRUE }
+
+glance_lm2 <- broom::glance(lm2)
+
+glance_lm2 %>% 
+   dplyr::mutate(across(where(is.numeric), round,3)) %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = 
+                  c("striped", "hover", "condensed", "responsive",
+                    full_width = F, position = "center")
+  ) 
+
+
+```
 ## augment()
 
 ```{r augment-lm2,echo=TRUE }
