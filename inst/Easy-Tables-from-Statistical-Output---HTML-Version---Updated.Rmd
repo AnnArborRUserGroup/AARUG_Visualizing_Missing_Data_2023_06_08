@@ -290,10 +290,11 @@ You can also improve the formatting (the default format is bad):
 
 xtable_lm2 <- xtable(lm2)
 
-align(xtable_lm2) <- xalign(xtable_lm2)
-digits(xtable_lm2) <- xdigits(xtable_lm2)
-display(xtable_lm2) <- xdisplay(xtable_lm2)
+# align(xtable_lm2) <- xalign(xtable_lm2)
+# digits(xtable_lm2) <- xdigits(xtable_lm2)
+# display(xtable_lm2) <- xdisplay(xtable_lm2)
 
+autoformat(xtable_lm2)
 
 print(xtable_lm2, type = "html")
 
@@ -415,7 +416,8 @@ head(augment_lm2)
 # References:
 
 *   The xtable package:
-  +   The xtable Gallery (google it; the link is problematic)
+  +   The xtable Gallery: https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf
+  +   Package 'xtable': https://cran.r-project.org/web/packages/xtable/xtable.pdf
     
  
 *   The broom package:  
