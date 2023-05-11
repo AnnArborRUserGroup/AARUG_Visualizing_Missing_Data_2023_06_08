@@ -299,11 +299,22 @@ residuals, etc.
 
 ## tidy()
 
+The tidy() function takes the output object and collects the components 
+into a data frame/tibble:
+
+
 ```{r tidy-lm2,echo=TRUE }
 
 tidy_lm2 <- broom::tidy(lm2)
 
-tidy_lm2 
+lm2
+
+```
+
+
+```{r print-tidy-lm2,echo=TRUE }
+
+tidy_lm2
 
 ```
 
