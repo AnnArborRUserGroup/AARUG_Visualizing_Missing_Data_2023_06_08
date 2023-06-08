@@ -67,6 +67,15 @@ df <- data.frame(
 
 ```
 
+The data set 'airquality':
+
+```{r head-airquality}
+
+head(airquality)
+
+```
+
+
 {{< pagebreak >}}
 
 # The **naniar** package:
