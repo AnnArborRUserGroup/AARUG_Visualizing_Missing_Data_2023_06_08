@@ -30,6 +30,10 @@ library(Amelia)
 library(UpSetR)
 library(naniar)
 library(VIM)
+library(visdat)
+
+
+
 ```
 
 Packages:
