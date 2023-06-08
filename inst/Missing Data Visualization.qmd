@@ -34,6 +34,7 @@ library(VIM)
 
 Packages:
 This demonstration will use the following packages:<p>
+-   vis_dat<p>
 -   nanniar<p>
 -   VIM<p>
 -   UpSetR<p>
@@ -75,18 +76,32 @@ Two websites on this are:
 
 All references given here will be listed at the end of the presentation.
 
-{{< pagebreak >}}
-## Vis_mis Plot
 
-This plot lists missing values by cases (rows) and variables (column) This allows you to see the patterns in the missingness, such as: \* Sets of variables by case, \* How many missing values are there by variable (columns and legends)
+## Vis_dat and Vis_mis Plots
 
-With a large number of cases, this gets more impressionistic, but shows patterns and overall amounts of missing data.
+These plots list missing values by cases (rows) and variables (column). This allows you to see the patterns in the missingness, such as: \* Sets of variables by case, \* How many missing values are there by variable (columns and legends). The vis_miss plot also show the types of values:<p>
+
+**vis_dat plot:**
+
 
 ```{r create-vis_miss-plot}
 
-naniar::vis_miss(airquality)
+vis_miss(airquality)
 
 ```
+
+
+**vis_miss plot:**
+
+
+```{r create-vis_miss-plot}
+
+vis_miss(airquality)
+
+```
+
+
+
 
 {{< pagebreak >}}
 ## aggr Plot
