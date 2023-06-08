@@ -13,8 +13,31 @@ Quarto enables you to weave together content and executable code into a finished
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r}
-1 + 1
+```{r load-libraries, include=FALSE}
+
+# load libraries as needed:
+
+library(tidyverse)
+library(ggplot2)
+library(janitor)
+library(kableExtra)
+library(magrittr)
+library(tidyverse)
+library(summarytools)
+library(xtable)
+library(broom)
+library(tidyr)
+# library(foreign)
+# library(haven)
+library(here)
+library(tidyr)
+
+# Missing data packages:
+
+library(Amelia)
+
+library(naniar)
+library(VIM)
 ```
 
 You can add options to executable code like this
