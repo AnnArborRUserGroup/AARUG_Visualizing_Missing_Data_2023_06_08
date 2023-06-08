@@ -57,6 +57,7 @@ df <- data.frame(
 
 ```
 
+
 ```{r create-aggr-plot-from-VIM}
 
 aggr_plot <- aggr(df, col=c('navyblue','red'), 
@@ -70,4 +71,18 @@ aggr_plot <- aggr(df, col=c('navyblue','red'),
 
 
 ```
+
+
+
+# References 
+
+  *   Project Location:  https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08<p>
+    *   File Location:   Missing Data Visualization.qmd<p>
+  *    <p>
+  *    <p>
+  *    <p>
+  *    <p>
+  *    <p>
+  *    <p>  
+
 
