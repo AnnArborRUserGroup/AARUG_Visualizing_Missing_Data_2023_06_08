@@ -75,11 +75,11 @@ aggr_plot <- aggr(df, col=c('navyblue','red'),
 
 
 # References 
-
+ 
   *   Project Location:  https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08<p>
     *   File Location:   Missing Data Visualization.qmd<p>
-  *    <p>
-  *    <p>
+  *   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html) <p>
+  *   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)<p>
   *    <p>
   *    <p>
   *    <p>
