@@ -35,7 +35,7 @@ library(tidyr)
 # Missing data packages:
 
 library(Amelia)
-
+library(UpSetR)
 library(naniar)
 library(VIM)
 ```
@@ -70,13 +70,13 @@ and overall amounts of missing data.
 
 ```{r create-vis_miss-plot}
 
-vis_miss(df)
+vis_miss(airquality)
 
 ```
 
 ```{r create-aggr-plot-from-VIM}
 
-aggr_plot <- aggr(df, col=c('navyblue','red'), 
+aggr_plot <- aggr(airquality, col=c('navyblue','red'), 
                   numbers=TRUE, 
                   sortVars=TRUE, 
                   labels=names(data), 
