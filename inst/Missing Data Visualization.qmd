@@ -55,7 +55,7 @@ df <- data.frame(
 
 {{< pagebreak >}}
 
-# <center>The **naniar** package:</center>
+ <center> #The **naniar** package:</center>
 
 The naniar package has a number of missing value functions.
 Two websites on this are:
