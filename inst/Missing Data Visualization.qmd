@@ -24,4 +24,19 @@ You can add options to executable code like this
 2 * 2
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r create-data-frame}
+
+# Sample data
+df <- data.frame(
+  v1 = c(1,2,NA,NA,NA,6),
+  v2 = c(NA,20,NA,40,50,NA),
+  v3 = c('a',NA,'c','d','e','f'),
+  v4 = c('aa','bb','cc','dd','ee','ff'),
+  stringsAsFactors = F
+)
+
+
+
+```
+
