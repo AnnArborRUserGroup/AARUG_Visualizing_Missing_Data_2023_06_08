@@ -1,0 +1,276 @@
+---
+title: "Gallery of Missing Data Visualisations"
+author: "Barry DeCicco"
+date: "10/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A Gallery of Missing Data Visualizations:
+
+From:  https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html
+
+
+## First, load/install all libraries needed
+
+#### As the file was built, the libraries needed were loaded here.
+
+```{r Load_Libraries, message = FALSE,warning = FALSE}
+
+
+library(tidyverse)   # dplyr is used.
+library(ggplot2)     # Most of the plots rely on this.
+
+
+library(tidyr)  # among other things, gets the 'who' data set
+library(naniar) # many, many nice functions for summaries of NA
+
+#  install.packages("UpSetR")
+#  library(UpSetR)
+
+```
+
+
+
+```{r  , eval=FALSE, echo=TRUE}
+
+
+
+
+```
+
+#### **Starting plot:  vis_miss, from the naniar package:**
+
+vis_miss(airquality)
+
+
+```{r vis_miss , eval=TRUE, echo=TRUE}
+
+vis_miss(airquality)
+
+head(airquality)
+tail(airquality)
+
+```
+
+
+
+#### **Exploring patterns with UpSetR:**
+
+UpSetR: ** A More Scalable Alternative to 
+Venn and Euler Diagrams for Visualizing Intersecting Sets**
+
+An upset plot from the UpSetR package can be used to 
+visualise the patterns of missingness, or rather the 
+combinations of missingness across cases. 
+To see combinations of missingness and intersections 
+of missingness amongst variables, 
+use the gg_miss_upset function:
+
+
+```{r gg_miss_upset , eval=TRUE, echo=TRUE}
+
+gg_miss_upset(airquality)
+
+
+```
+
+
+This tells us:
+
+Only Ozone and Solar.R have missing values
+
+1. Ozone has the most missing values
+2. There are 2 cases where both Solar.R and Ozone have missing values together
+
+#### We can explore this with more complex data, such as riskfactors:
+
+
+
+
+```{r miss_upset_riskfactors , eval=TRUE, echo=TRUE}
+
+gg_miss_upset(riskfactors)
+
+
+```
+
+The default option of gg_miss_upset is taken from UpSetR::upset - which is to use up to 5 sets and up to 40 interactions. Here, setting nsets = 5 means to look at 5 variables and their combinations. The number of combinations or rather intersections is controlled by nintersects.
+
+```{r miss_upset_riskfactors_more , eval=TRUE, echo=TRUE}
+
+gg_miss_upset(riskfactors, 
+              nsets = 10,
+              nintersects = 50)
+
+
+
+```
+
+
+ You could, for example look at all of the number of missing variables using n_var_miss:
+
+#### how many missings?  
+n_var_miss(riskfactors) = `r n_var_miss(riskfactors)`
+
+```{r miss_upset_riskfactors_n_var_miss , eval=TRUE, echo=TRUE}
+
+gg_miss_upset(riskfactors, 
+              nsets = n_var_miss(riskfactors),
+              nintersects = 50)
+
+
+```
+
+If there are 40 intersections, there will be up to 40 combinations of variables explored. The number of sets and intersections can be changed by passing arguments nsets = 10 to look at 10 sets of variables, and nintersects = 50 to look at 50 intersections (not shown here).
+
+Setting nintersects to NA will plot all sets and all intersections.
+
+
+## Exploring Missingness Mechanisms
+
+
+There are a few different ways to explore different missing data mechanisms and relationships. One way incorporates the method of shifting missing values so that they can be visualised on the same axes as the regular values, and then colours the missing and not missing points. This is implemented with geom_miss_point().
+
+```{r ordinary_ggplot , eval=TRUE, echo=TRUE}
+
+ggplot(airquality,
+       aes(x = Ozone,
+           y = Solar.R)) +
+geom_point()
+
+
+```
+
+
+```{r geom_miss_point , eval=TRUE, echo=TRUE}
+
+# using  geom_miss_point()
+ggplot(airquality,
+       aes(x = Ozone,
+           y = Solar.R)) +
+ geom_miss_point()              # from naniar
+
+```
+
+
+Adding facets helps with insight:
+
+```{r geom_miss_point_facets , eval=TRUE, echo=TRUE}
+
+# using  geom_miss_point()
+
+ggplot(airquality,
+       aes(x = Ozone,
+           y = Solar.R)) +
+ geom_miss_point() + 
+ facet_wrap(~Month)             # from naniar
+
+```
+
+## General visual summaries of missing data:  gg_miss_
+
+Here are some function that provide quick summaries of missingness in your data, they all start with gg_miss_ - so that they are easy to remember and tab-complete.
+
+
+#### Missingness in variables with gg_miss_var:
+
+```{r gg_miss_var_count , eval=TRUE, echo=TRUE}
+
+gg_miss_var(airquality) + 
+  labs(y = "Look at all the missing ones; show counts")          
+
+```
+
+```{r gg_miss_var_pct , eval=TRUE, echo=TRUE}
+
+gg_miss_var(airquality, show_pct = TRUE) + 
+  labs(y = "Look at all the missing ones; show pct")  
+
+```
+
+You can also plot the number of missing values in a variable grouped by another variable using the facet argument:
+
+```{r gg_miss_var_by_month , eval=TRUE, echo=TRUE}
+
+gg_miss_var(airquality,
+            facet = Month)  + 
+  labs(y = "Look at all the missing ones; show pct")
+
+```
+
+
+## Missingness in cases with gg_miss_case
+
+This plot shows the number of missing values in each case. It is powered by the miss_case_summary() function:
+
+```{r gg_miss_case , eval=TRUE, echo=TRUE}
+
+gg_miss_case(airquality, order_cases = TRUE, facet = Month)  + 
+  labs(x = "Number of Cases")
+
+```
+
+## Missingness across factors with gg_miss_fct:
+
+This plot shows the number of missings in each column, broken down by a categorical variable from the dataset. It is powered by a dplyr::group_by statement followed by miss_var_summary().
+
+
+```{r gg_miss_fct , eval=TRUE, echo=TRUE}
+
+gg_miss_fct(x = riskfactors, fct = marital) + labs(title = "NA in Risk Factors and Marital status")
+
+```
+
+
+
+#### Combining with dplyr to run this **by group**:
+
+```{r gg_miss_by_group , eval=TRUE, echo=TRUE}
+
+riskfactors %>%
+  group_by(marital) %>%
+  miss_var_summary()
+
+```
+
+Given a time variable, you can explore missingness along time:
+
+```{r gg_miss_over_time , eval=TRUE, echo=TRUE}
+
+gg_miss_fct(who, year)+
+  labs("Graph Label goes Here")
+
+```
+
+## Missingness along a repeating span with gg_miss_span
+
+This plot shows the number of missings in a given span, or breaksize, for a single selected variable. In this case we look at the span of hourly_counts from the pedestrian dataset. It is powered by the miss_var_span function
+
+
+```{r gg_miss_time_span, eval=TRUE, echo=TRUE}
+
+miss_var_span(pedestrian, hourly_counts, span_every = 3000)
+
+gg_miss_span(pedestrian, hourly_counts, span_every = 3000)
+
+gg_miss_span(pedestrian, 
+             hourly_counts, 
+             span_every = 3000, 
+             facet = sensor_name)
+
+```
+
+### gg_miss_case_cumsum
+
+This plot shows the cumulative sum of missing values, reading the rows of the dataset from the top to bottom. It is powered by the miss_case_cumsum() function:
+
+
+```{r gg_miss_cum_sum, eval=TRUE, echo=TRUE}
+
+gg_miss_case_cumsum(airquality)
+
+```

@@ -1,0 +1,88 @@
+---
+title: "Gallery of Missing Data Visualisations"
+author: "Barry DeCicco"
+date: "10/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Visualizing Missing Data in R
+
+#### Materials from:
+
+https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html
+
+
+## First, load/install all libraries needed
+
+#### As the file was built, the libraries needed were loaded here.
+
+```{r Load_Libraries}
+library(tidyverse)
+library(ggplot2)
+library(Amelia)
+
+library(naniar)
+
+
+#  install.packages("wakefield")
+library(wakefield)
+
+```
+## Create Data Set:
+
+First, use the 'Wakefield package to create a data set, with 40% missingness.
+
+```{r ggplot_missing_data_create_df, eval=FALSE, echo=TRUE}
+
+df <- 
+  r_data_frame(
+    n = 30,
+    id,
+    race,
+    age,
+    sex,
+    hour,
+    iq,
+    height,
+    died,
+    Scoring = rnorm,
+    Smoker = valid
+  ) %>%
+  r_na(prob=.4)
+
+# missmap(df)  #THIS DOES NOT WORK!
+
+# Warning messages:
+# 1: Unknown or uninitialised column: `arguments`. 
+# 2: Unknown or uninitialised column: `arguments`. 
+# 3: Unknown or uninitialised column: `imputations`.
+
+# It's from the Amelia package, and was used in the original blog post.
+# I think that the df needs to be of class "amelia"
+
+
+```
+
+
+
+
+
+```{r , eval=TRUE, echo=TRUE}
+
+
+
+
+```
+
+
+
+```{r , eval=TRUE, echo=TRUE}
+
+
+
+
+```
