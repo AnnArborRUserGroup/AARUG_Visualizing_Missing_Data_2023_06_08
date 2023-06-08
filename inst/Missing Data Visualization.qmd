@@ -46,6 +46,7 @@ This demonstration will use two data frames: <p>
 <p>
 <p>
 
+Create the data 'df':<p>
 ```{r create-data-frame, include=TRUE}
 
 # Sample data
