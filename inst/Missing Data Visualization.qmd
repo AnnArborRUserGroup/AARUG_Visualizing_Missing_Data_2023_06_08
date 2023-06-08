@@ -58,6 +58,15 @@ df <- data.frame(
 ```
 
 
+## Vis_mis Plot
+
+
+```{r create-vis_miss-plot}
+
+vis_miss(df)
+
+```
+
 ```{r create-aggr-plot-from-VIM}
 
 aggr_plot <- aggr(df, col=c('navyblue','red'), 
