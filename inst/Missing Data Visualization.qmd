@@ -5,8 +5,6 @@ format: docx
 editor: visual
 ---
 
-
-
 ```{r load-libraries, include=FALSE}
 
 # load libraries as needed:
@@ -34,10 +32,11 @@ library(naniar)
 library(VIM)
 ```
 
-This demonstraction will use two data frames:
-  *   'df', which is created below,<p>
-  * 'airquality', which is a set of daily air quality readings from New York City, 1973.<
-  
+This demonstraction will use two data frames: \* 'df', which is created below,
+
+<p>
+
+-   'airquality', which is a set of daily air quality readings from New York City, 1973.\<
 
 ```{r create-data-frame}
 
@@ -54,16 +53,14 @@ df <- data.frame(
 
 ```
 
+{{< pagebreak >}}
+
 
 ## Vis_mis Plot
 
-This plot lists missing values by cases (rows) and variables (column)
-This allows you to see the patterns in the missingness, such as:
-  * Sets of variables by case,
-  * How many missing values are there by variable (columns and legends)
-  
-With a large number of cases, this gets more impressionistic, but shows patterns
-and overall amounts of missing data.
+This plot lists missing values by cases (rows) and variables (column) This allows you to see the patterns in the missingness, such as: \* Sets of variables by case, \* How many missing values are there by variable (columns and legends)
+
+With a large number of cases, this gets more impressionistic, but shows patterns and overall amounts of missing data.
 
 ```{r create-vis_miss-plot}
 
@@ -85,17 +82,28 @@ aggr_plot <- aggr(airquality, col=c('navyblue','red'),
 
 ```
 
+# References
 
+-   Project Location: https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08
 
-# References 
- 
-  *   Project Location:  https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08<p>
-    *   File Location:   Missing Data Visualization.qmd<p>
-  *   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html) <p>
-  *   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)<p>
-  *    <p>
-  *    <p>
-  *    <p>
-  *    <p>  
+    <p>
 
+    -   File Location: Missing Data Visualization.qmd
 
+        <p>
+
+-   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html)
+
+    <p>
+
+-   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
+
+    <p>
+
+-   <p>
+
+-   <p>
+
+-   <p>
+
+-   <p>
