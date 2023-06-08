@@ -32,13 +32,13 @@ library(naniar)
 library(VIM)
 ```
 
-This demonstraction will use two data frames: \* 'df', which is created below,
+This demonstration will use two data frames: 
 
-<p>
+-   **df**, which is created below, <p>
+-   ***airquality**, which is a set of daily air quality readings from New York City, 1973.<p>
 
--   'airquality', which is a set of daily air quality readings from New York City, 1973.\<
 
-```{r create-data-frame}
+```{r create-data-frame, include=TRUE}
 
 # Sample data
 df <- data.frame(
