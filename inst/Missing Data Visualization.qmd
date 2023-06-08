@@ -34,7 +34,10 @@ library(naniar)
 library(VIM)
 ```
 
-
+This demonstraction will use two data frames:
+  *   'df', which is created below,<p>
+  * 'airquality', which is a set of daily air quality readings from New York City, 1973.<
+  
 
 ```{r create-data-frame}
 
