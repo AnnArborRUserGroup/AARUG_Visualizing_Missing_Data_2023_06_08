@@ -78,19 +78,10 @@ head(airquality)
 
 {{< pagebreak >}}
 
-# The **naniar** package:
 
-The naniar package has a number of missing value functions.
-Two websites on this are:
+## The **visdat** package:
 
--   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html) <p>
-
--   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
-
-All references given here will be listed at the end of the presentation.
-
-
-## Vis_dat and Vis_mis Plots
+This has the Vis_dat and Vis_mis plots:
 
 These plots list missing values by cases (rows) and variables (column). This allows you to see the patterns in the missingness, such as: \* Sets of variables by case, \* How many missing values are there by variable (columns and legends). The vis_miss plot also show the types of values:<p>
 
@@ -113,10 +104,50 @@ vis_miss(airquality)
 
 ```
 
-
-
-
 {{< pagebreak >}}
+
+# GGPlot:
+There as several geoms which can be used:
+
+
+The **geom_miss** geom:
+
+
+```{r}
+
+
+ggplot(airquality, 
+       aes(x = Solar.R, 
+           y = Ozone)) + 
+  geom_miss_point()
+
+```
+
+
+
+
+# The **naniar** package:
+
+The naniar package has a number of missing value functions.
+Two websites on this are:
+
+-   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html) <p>
+
+-   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
+
+All references given here will be listed at the end of the presentation.
+
+
+**vis_miss plot:**
+
+
+```{r create-vis_miss-plot-naniar}
+
+vis_miss(airquality)
+
+```
+
+
 ## aggr Plot
 
  
