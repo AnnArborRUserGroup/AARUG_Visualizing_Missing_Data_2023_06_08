@@ -55,8 +55,16 @@ df <- data.frame(
 
 {{< pagebreak >}}
 
-# The **naniar** package:
+# <center>The **naniar** package:</center>
 
+The naniar package has a number of missing value functions.
+Two websites on this are:
+
+-   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html) <p>
+
+-   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
+
+All reference given here will be listed at the end of the presentation.
 
 
 ## Vis_mis Plot
