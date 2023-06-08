@@ -32,11 +32,19 @@ library(naniar)
 library(VIM)
 ```
 
-This demonstration will use two data frames: 
+Packages:
+This demonstration will use the following packages:<p>
+-   nanniar<p>
+-   VIM<p>
+-   UpSetR<p>
+
+Data:
+This demonstration will use two data frames: <p>
 
 -   **df**, which is created below, <p>
--   ***airquality**, which is a set of daily air quality readings from New York City, 1973.<p>
-
+-   **airquality**, which is a set of daily air quality readings from New York City, 1973.<p>
+<p>
+<p>
 
 ```{r create-data-frame, include=TRUE}
 
@@ -55,7 +63,7 @@ df <- data.frame(
 
 {{< pagebreak >}}
 
- <center> The **naniar** package:</center>
+# The **naniar** package:
 
 The naniar package has a number of missing value functions.
 Two websites on this are:
@@ -64,9 +72,9 @@ Two websites on this are:
 
 -   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
 
-All reference given here will be listed at the end of the presentation.
+All references given here will be listed at the end of the presentation.
 
-
+{{< pagebreak >}}
 ## Vis_mis Plot
 
 This plot lists missing values by cases (rows) and variables (column) This allows you to see the patterns in the missingness, such as: \* Sets of variables by case, \* How many missing values are there by variable (columns and legends)
@@ -75,10 +83,14 @@ With a large number of cases, this gets more impressionistic, but shows patterns
 
 ```{r create-vis_miss-plot}
 
-vis_miss(airquality)
+naniar::vis_miss(airquality)
 
 ```
 
+{{< pagebreak >}}
+## aggr Plot
+
+ 
 ```{r create-aggr-plot-from-VIM}
 
 aggr_plot <- aggr(airquality, col=c('navyblue','red'), 
@@ -93,6 +105,8 @@ aggr_plot <- aggr(airquality, col=c('navyblue','red'),
 
 ```
 
+
+{{< pagebreak >}}
 # References
 
 -   Project Location: https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08
