@@ -38,6 +38,7 @@ library(visdat)
 
 Packages:
 This demonstration will use the following packages:<p>
+-   ggplot2<p>
 -   vis_dat<p>
 -   nanniar<p>
 -   VIM<p>
@@ -46,26 +47,10 @@ This demonstration will use the following packages:<p>
 Data:
 This demonstration will use two data frames: <p>
 
--   **df**, which is created below, <p>
+-   **riskfactors**, a subset of a survey for measure behavioral risk factors for certain adults, <p>
 -   **airquality**, which is a set of daily air quality readings from New York City, 1973.<p>
 <p>
 <p>
-
-Create the data 'df':<p>
-```{r create-data-frame, include=TRUE}
-
-# Sample data
-df <- data.frame(
-  v1 = c(1,2,NA,NA,NA,6),
-  v2 = c(NA,20,NA,40,50,NA),
-  v3 = c('a',NA,'c','d','e','f'),
-  v4 = c('aa','bb','cc','dd','ee','ff'),
-  stringsAsFactors = F
-)
-
-
-
-```
 
 The data set 'airquality':
 
@@ -75,6 +60,14 @@ head(airquality)
 
 ```
 
+
+The data set 'riskfactors':
+
+```{r head-riskfactors}
+
+head(riskfactors)
+
+```
 
 {{< pagebreak >}}
 
@@ -106,14 +99,11 @@ vis_miss(airquality)
 
 {{< pagebreak >}}
 
-# GGPlot:
-There as several geoms which can be used:
-
+# The **GGPlot** package: 
 
 The **geom_miss** geom:
 
-
-```{r}
+```{r plot-airquality-geom_miss_point}
 
 
 ggplot(airquality, 
@@ -123,9 +113,7 @@ ggplot(airquality,
 
 ```
 
-
-
-
+{{< pagebreak >}}
 # The **naniar** package:
 
 The naniar package has a number of missing value functions.
@@ -137,8 +125,7 @@ Two websites on this are:
 
 All references given here will be listed at the end of the presentation.
 
-
-**vis_miss plot:**
+**vis_miss plot:** (same as for vis_dat)
 
 
 ```{r create-vis_miss-plot-naniar}
@@ -147,8 +134,28 @@ vis_miss(airquality)
 
 ```
 
+The **geom_miss_var** plot:
 
-## aggr Plot
+
+```{r geom-miss-var-plot-naniar-airquality}
+
+gg_miss_var(airquality) 
+
+```
+
+
+```{r geom-miss-var-plot-naniar-riskfactors}
+
+gg_miss_var(riskfactors) 
+
+```
+
+
+
+
+## The VIM Package:
+
+**aggr** plot
 
  
 ```{r create-aggr-plot-from-VIM}
@@ -161,6 +168,32 @@ aggr_plot <- aggr(airquality, col=c('navyblue','red'),
                   ylab=c("Histogram of missing data","Pattern"))
 
 
+
+
+```
+
+{{< pagebreak >}}
+
+## The UpSetR package
+
+This shows relationships between different variables, for missingness:
+
+**gg_miss_upset** plot:
+
+```{r create-gg_miss_upset-plot-UpSetR}
+
+gg_miss_upset(airquality)
+
+
+```
+
+
+Looking at a more complicated data set:
+
+
+```{r create-gg_miss_upset-plot-riskfactors-UpSetR}
+
+gg_miss_upset(riskfactors)
 
 
 ```
