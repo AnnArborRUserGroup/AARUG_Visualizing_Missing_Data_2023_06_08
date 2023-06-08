@@ -60,6 +60,13 @@ df <- data.frame(
 
 ## Vis_mis Plot
 
+This plot lists missing values by cases (rows) and variables (column)
+This allows you to see the patterns in the missingness, such as:
+  * Sets of variables by case,
+  * How many missing values are there by variable (columns and legends)
+  
+With a large number of cases, this gets more impressionistic, but shows patterns
+and overall amounts of missing data.
 
 ```{r create-vis_miss-plot}
 
