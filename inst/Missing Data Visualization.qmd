@@ -84,9 +84,9 @@ These plots list missing values by cases (rows) and variables (column). This all
 **vis_dat plot:**
 
 
-```{r create-vis_miss-plot}
+```{r create-vis_miss-dat}
 
-vis_miss(airquality)
+vis_dat(airquality)
 
 ```
 
