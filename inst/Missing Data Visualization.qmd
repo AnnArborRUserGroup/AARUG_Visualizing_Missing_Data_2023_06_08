@@ -36,21 +36,45 @@ library(visdat)
 
 ```
 
-Packages:
-This demonstration will use the following packages:<p>
--   ggplot2<p>
--   vis_dat<p>
--   nanniar<p>
--   VIM<p>
--   UpSetR<p>
+Packages: This demonstration will use the following packages:
 
-Data:
-This demonstration will use two data frames: <p>
+<p>
 
--   **riskfactors**, a subset of a survey for measure behavioral risk factors for certain adults, <p>
--   **airquality**, which is a set of daily air quality readings from New York City, 1973.<p>
+-   ggplot2
+
+    <p>
+
+-   vis_dat
+
+    <p>
+
+-   nanniar
+
+    <p>
+
+-   VIM
+
+    <p>
+
+-   UpSetR
+
+    <p>
+
+Data: This demonstration will use two data frames:
+
 <p>
-<p>
+
+-   **riskfactors**, a subset of a survey for measure behavioral risk factors for certain adults,
+
+    <p>
+
+-   **airquality**, which is a set of daily air quality readings from New York City, 1973.
+
+    <p>
+
+    <p>
+
+    <p>
 
 The data set 'airquality':
 
@@ -59,7 +83,6 @@ The data set 'airquality':
 head(airquality)
 
 ```
-
 
 The data set 'riskfactors':
 
@@ -71,15 +94,15 @@ head(riskfactors)
 
 {{< pagebreak >}}
 
-
 ## The **visdat** package:
 
 This has the Vis_dat and Vis_mis plots:
 
-These plots list missing values by cases (rows) and variables (column). This allows you to see the patterns in the missingness, such as: \* Sets of variables by case, \* How many missing values are there by variable (columns and legends). The vis_miss plot also show the types of values:<p>
+These plots list missing values by cases (rows) and variables (column). This allows you to see the patterns in the missingness, such as: \* Sets of variables by case, \* How many missing values are there by variable (columns and legends). The vis_miss plot also show the types of values:
+
+<p>
 
 **vis_dat plot:**
-
 
 ```{r create-vis_miss-dat}
 
@@ -87,9 +110,7 @@ vis_dat(airquality)
 
 ```
 
-
 **vis_miss plot:**
-
 
 ```{r create-vis_miss-plot}
 
@@ -99,7 +120,7 @@ vis_miss(airquality)
 
 {{< pagebreak >}}
 
-# The **GGPlot** package: 
+# The **GGPlot** package:
 
 The **geom_miss** geom:
 
@@ -113,20 +134,19 @@ ggplot(airquality,
 
 ```
 
-{{< pagebreak >}}
-# The **naniar** package:
+{{< pagebreak >}} \# The **naniar** package:
 
-The naniar package has a number of missing value functions.
-Two websites on this are:
+The naniar package has a number of missing value functions. Two websites on this are:
 
--   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html) <p>
+-   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html)
+
+    <p>
 
 -   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
 
 All references given here will be listed at the end of the presentation.
 
 **vis_miss plot:** (same as for vis_dat)
-
 
 ```{r create-vis_miss-plot-naniar}
 
@@ -136,13 +156,11 @@ vis_miss(airquality)
 
 The **geom_miss_var** plot:
 
-
 ```{r geom-miss-var-plot-naniar-airquality}
 
 gg_miss_var(airquality) 
 
 ```
-
 
 ```{r geom-miss-var-plot-naniar-riskfactors}
 
@@ -150,14 +168,10 @@ gg_miss_var(riskfactors)
 
 ```
 
-
-
-
 ## The VIM Package:
 
 **aggr** plot
 
- 
 ```{r create-aggr-plot-from-VIM}
 
 aggr_plot <- aggr(airquality, col=c('navyblue','red'), 
@@ -187,9 +201,7 @@ gg_miss_upset(airquality)
 
 ```
 
-
 Looking at a more complicated data set:
-
 
 ```{r create-gg_miss_upset-plot-riskfactors-UpSetR}
 
@@ -198,9 +210,7 @@ gg_miss_upset(riskfactors)
 
 ```
 
-
-{{< pagebreak >}}
-# References
+{{< pagebreak >}} \# References
 
 -   Project Location: https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08
 
