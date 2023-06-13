@@ -5,6 +5,12 @@ format:
   html
     toc: true
 editor: visual
+title: "Missing Data Visualization - Ann Arbor R User's Group"
+author: "Barry DeCicco"
+format:
+  html:
+    toc: true
+editor: source
 ---
 
 ```{r load-libraries, include=FALSE}
