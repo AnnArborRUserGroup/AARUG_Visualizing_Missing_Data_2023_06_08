@@ -1,12 +1,6 @@
 ---
 title: "Missing Data Visualization - Ann Arbor R User's Group"
 author: "Barry DeCicco"
-format: 
-  html
-    toc: true
-editor: visual
-title: "Missing Data Visualization - Ann Arbor R User's Group"
-author: "Barry DeCicco"
 format:
   html:
     toc: true
@@ -80,9 +74,7 @@ head(riskfactors)
 
 ```
 
-{{< pagebreak >}}
-
-## The **visdat** package:
+# The **visdat** package:
 
 This has the Vis_dat and Vis_mis plots:
 
@@ -106,7 +98,6 @@ vis_miss(airquality)
 
 ```
 
-{{< pagebreak >}}
 
 # The **GGPlot** package:
 
@@ -122,7 +113,7 @@ ggplot(airquality,
 
 ```
 
-{{< pagebreak >}} \# The **naniar** package:
+# The **naniar** package:
 
 The naniar package has a number of missing value functions. Two websites on this are:
 
@@ -156,7 +147,7 @@ gg_miss_var(riskfactors)
 
 ```
 
-## The VIM Package:
+# The VIM Package:
 
 **aggr** plot
 
@@ -174,9 +165,8 @@ aggr_plot <- aggr(airquality, col=c('navyblue','red'),
 
 ```
 
-{{< pagebreak >}}
 
-## The UpSetR package
+# The UpSetR package
 
 This shows relationships between different variables, for missingness:
 
@@ -198,23 +188,14 @@ gg_miss_upset(riskfactors)
 
 ```
 
-{{< pagebreak >}} \# References
+# References
 
--   Project Location: https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08
+-   Project Location: https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08    <p>
+    -   File Location: Missing Data Visualization.qmd <p>
 
-    <p>
+-   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html)<p>
 
-    -   File Location: Missing Data Visualization.qmd
-
-        <p>
-
--   Gallery of Missing Data Visualisations, by Nicholas Tierney (https://cran.r-project.org/web/packages/naniar/vignettes/naniar-visualisation.html)
-
-    <p>
-
--   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
-
-    <p>
+-   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)<p>
 
 -   <p>
 
