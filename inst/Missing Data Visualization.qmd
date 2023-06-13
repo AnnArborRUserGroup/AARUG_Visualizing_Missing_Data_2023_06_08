@@ -1,7 +1,9 @@
 ---
 title: "Missing Data Visualization - Ann Arbor R User's Group"
 author: "Barry DeCicco"
-format: html
+format: 
+  html
+    toc: true
 editor: visual
 ---
 
