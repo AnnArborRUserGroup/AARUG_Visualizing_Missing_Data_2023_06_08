@@ -38,45 +38,25 @@ library(visdat)
 
 ```
 
-Packages: This demonstration will use the following packages:
+# Packages and Data Frames:
 
-<p>
+This demonstration will use the following packages:<p>
 
--   ggplot2
+-   ggplot2<p>
+-   vis_dat<p>
+-   nanniar<p>
+-   VIM<p>
+-   UpSetR<p>
 
+
+Data: This demonstration will use two data frames: <p>
+
+-   **riskfactors**, a subset of a survey for measure behavioral risk factors for certain adults,<p>
+
+-   **airquality**, which is a set of daily air quality readings from New York City, 1973.<p>
     <p>
 
--   vis_dat
-
-    <p>
-
--   nanniar
-
-    <p>
-
--   VIM
-
-    <p>
-
--   UpSetR
-
-    <p>
-
-Data: This demonstration will use two data frames:
-
-<p>
-
--   **riskfactors**, a subset of a survey for measure behavioral risk factors for certain adults,
-
-    <p>
-
--   **airquality**, which is a set of daily air quality readings from New York City, 1973.
-
-    <p>
-
-    <p>
-
-    <p>
+## Examining the Data Sets:
 
 The data set 'airquality':
 
