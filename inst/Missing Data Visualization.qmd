@@ -4,6 +4,8 @@ author: "Barry DeCicco"
 format:
   html:
     toc: true
+    code-fold: true
+    code-summary: "Show the code"
 editor: source
 ---
 
@@ -197,10 +199,10 @@ gg_miss_upset(riskfactors)
 
 -   Getting Started with naniar, by Nicholas Tierney (http://naniar.njtierney.com/articles/getting-started-w-naniar.html)<p>
 
--   <p>
+-   The VIM Package (https://cran.r-project.org/web/packages/VIM/index.html)<p>
 
--   <p>
+-   Basic Usage (UpSetR) https://cran.r-project.org/web/packages/UpSetR/vignettes/basic.usage.html<p>
 
--   <p>
+-   Using visdat, by Nicholas Tierney (https://cran.r-project.org/web/packages/visdat/vignettes/using_visdat.html)<p>
 
--   <p>
+
