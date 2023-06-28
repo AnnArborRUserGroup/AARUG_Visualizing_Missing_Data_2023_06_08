@@ -30,6 +30,7 @@ library(tidyr)
 
 # Missing data packages:
 
+library(mice)
 library(Amelia)
 library(UpSetR)
 library(naniar)
@@ -189,6 +190,28 @@ gg_miss_upset(riskfactors)
 
 
 ```
+
+
+## The missing_pattern function:
+
+Look for patterns of missingness: missing_pattern function
+
+```{r}
+
+ explanatory = c("age", "sex.factor", 
+  "obstruct.factor",  
+  "smoking_mcar", "smoking_mar")
+dependent = "mort_5yr"
+
+colon_s %>% 
+  missing_pattern(dependent, explanatory)
+
+
+
+```
+
+
+
 
 # Associations between missing and observed data: 
 
