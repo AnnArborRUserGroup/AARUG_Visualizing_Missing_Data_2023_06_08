@@ -190,6 +190,11 @@ gg_miss_upset(riskfactors)
 
 ```
 
+# Associations between missing and observed data: 
+
+
+
+
 # References
 
 -   Project Location: https://github.com/AnnArborRUserGroup/AARUG_Visualizing_Missing_Data_2023_06_08    <p>
@@ -204,5 +209,10 @@ gg_miss_upset(riskfactors)
 -   Basic Usage (UpSetR) https://cran.r-project.org/web/packages/UpSetR/vignettes/basic.usage.html<p>
 
 -   Using visdat, by Nicholas Tierney (https://cran.r-project.org/web/packages/visdat/vignettes/using_visdat.html)<p>
+
+-   Missing data, by Evan Harrison (https://cran.r-project.org/web/packages/finalfit/vignettes/missing.html)
+
+-   The Analysis Factor - How to Diagnose the Missing Data Mechanism, by Karen Grace-Martin (https://www.theanalysisfactor.com/missing-data-mechanism/)
+
 
 
